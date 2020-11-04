@@ -79,20 +79,16 @@ document.getElementById('book-form').addEventListener('submit',
       // Error alert
       ui.showAlert('Please fill in all fields', 'error')
     } else {
+      // Add book to list
       ui.addBookToList(book)
+
+      // Show success
+      ui.showAlert('Book Added!', 'success')
+
+      // Clear fields
       ui.clearFields()
     }
 
-    // Add book to list
-    ui.addBookToList(book)
-
-    // Show success
-    ui.showAlert('Book Added!', 'success')
-
-    // Clear fields
-    ui.clearFields()
-
-    console.log(title, author, isbn)
     e.preventDefault()
   })
 
